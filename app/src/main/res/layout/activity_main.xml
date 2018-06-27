@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="18dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-medium"
+            android:text="This quiz is about soccer. The World Cup is still ongoing and its a pretty good time to learn about soccer..!!"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wc"
+            android:paddingBottom="18dp"/>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="1. How much of the ball must cross the line before the ball is out of play or a goal is given?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_one_group">
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_a"
+                    android:text="A half"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionOneAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_b"
+                    android:text="A quarter"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionOneAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_c"
+                    android:text="Three quarters"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionOneAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_d"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="8dp"
+                    android:text="All of it"
+                    android:onClick="questionOneAnswered"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="2. Which two colour cards do referee’s use during a match?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_two_group">
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_two_a"
+                    android:text="Red and Yellow"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionTwoAnswered"/>
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_two_b"
+                    android:text="Yellow and Brown"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionTwoAnswered"/>
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_two_c"
+                    android:text="Red and Black"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionTwoAnswered"/>
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_two_d"
+                    android:text="Brown and Red"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionTwoAnswered"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="3. At least how many yards must the wall be away from a direct free kick?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_three_group">
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_three_a"
+                    android:text="7 yards"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionThreeAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_three_b"
+                    android:text="8 yards"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionThreeAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_three_c"
+                    android:text="9 yards"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionThreeAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_three_d"
+                    android:text="10 yards"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionThreeAnswered"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="4. Which country is hosting the 2018 world cup?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_four_group">
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_four_a"
+                    android:text="Malaysia"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionFourAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_four_b"
+                    android:text="Russia"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionFourAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_four_c"
+                    android:text="Ghana"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionFourAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_four_d"
+                    android:text="South Africa"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionFourAnswered"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="5. Exactly how far away from the goal line is the penalty spot?"/>
+
+            <EditText
+                style="@style/question_textviews"
+                android:id="@+id/q_five_answer"
+                android:layout_marginTop="12dp"
+                android:hint="Number of yards eg. 3 or 4 or ??"
+                android:inputType="number"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="6. What size ball is used in professional soccer matches?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_six_group">
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_six_a"
+                    android:text="Size 3"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSixAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_six_b"
+                    android:text="Size 4"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSixAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_six_c"
+                    android:text="size 5"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSixAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_six_d"
+                    android:text="size 6"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSixAnswered"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:textAlignment="center"
+                android:text="7. Excluding the goalkeeper, what part of the body cannot touch the ball?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_seven_group">
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_seven_a"
+                    android:text="Top of the foot"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSevenAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_seven_b"
+                    android:text="Head"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSevenAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_seven_c"
+                    android:text="Arm"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSevenAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_seven_d"
+                    android:text="Chest"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionSevenAnswered"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                style="@style/question_linear_layout"
+                android:id="@+id/checkbox_question">
+
+                <TextView
+                    style="@style/question_textviews"
+                    android:text="8. Which of these are famous soccer players?"/>
+
+                <CheckBox
+                    style="@style/checkbox_answers"
+                    android:id="@+id/q_eight_a"
+                    android:text="Le Bron James"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionEightAnswered"/>
+                <CheckBox
+                    style="@style/checkbox_answers"
+                    android:id="@+id/q_eight_b"
+                    android:text="Lionel Messi"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionEightAnswered"/>
+                <CheckBox
+                    style="@style/checkbox_answers"
+                    android:id="@+id/q_eight_c"
+                    android:text="James Harding"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionEightAnswered"/>
+                <CheckBox
+                    style="@style/checkbox_answers"
+                    android:id="@+id/q_eight_d"
+                    android:text="Andres Iniesta"
+                    android:paddingLeft="8dp"
+                    android:onClick="questionEightAnswered"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:paddingTop="18dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Pressing the submit button will give you your score and reset the quiz, hope you had fun :-)"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="12dp"
+                android:onClick="submitAnswersTapped"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#ffffff"
+                android:text="Submit Quiz"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
